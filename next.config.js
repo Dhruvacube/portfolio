@@ -5,6 +5,6 @@ const nextConfig = {
     loader: 'cloudinary',
     path: 'res.cloudinary.com/mikuchan'
   },
-}
+};
 
 module.exports = nextConfig;
