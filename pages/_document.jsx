@@ -6,7 +6,7 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <link href="/favicon.ico" rel="apple-touch-icon"/>
+        <link href="/favicon.ico" rel="apple-touch-icon" />
         <link
           href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
           rel="stylesheet"
