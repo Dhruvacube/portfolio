@@ -35,7 +35,7 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col items-center text-center justify-center">
-                <h2 className="font-medium title-font mt-4 text-gray-900 text-lg dark:text-white">
+                <h2 className="font-medium title-font mt-4 text-gray-900 text-5xl dark:text-white">
                   Dhruva Shaw
                 </h2>
                 <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
@@ -308,20 +308,6 @@ export default function Home() {
                   height="40"
                 />
               </p>
-              {/* <a className="text-indigo-500 inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a> */}
             </div>
           </div>
         </div>

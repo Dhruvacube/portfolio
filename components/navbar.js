@@ -32,8 +32,8 @@ const Navbar = () => {
                   </a>
                 </Link>
 
-                <Link href="#">
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="https://dhruvashaw.hashnode.dev/">
+                  <a target="_blank" rel="noopener noreferrer"  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Blogs
                   </a>
                 </Link>
@@ -103,20 +103,20 @@ const Navbar = () => {
             </a>
           </Link>
 
-          <Link href="/">
+          <Link href="#">
             <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Resume
             </a>
           </Link>
 
-          <Link href="/">
+          <Link href="#">
             <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Projects
             </a>
           </Link>
 
-          <Link href="/">
-            <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+          <Link href="https://dhruvashaw.hashnode.dev/" >
+            <a target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Blogs
             </a>
           </Link>
