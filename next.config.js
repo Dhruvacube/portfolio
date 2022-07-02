@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    loader: 'cloudinary',
-    path: 'https://res.cloudinary.com/mikuchan'
+  experimental: {
+    images: {
+      unoptimized: Boolean(process.env.LOCAL) ? false : true,
+    },
   },
 };
 
