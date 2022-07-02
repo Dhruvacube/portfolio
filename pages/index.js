@@ -15,7 +15,7 @@ export default function Home() {
               className="object-cover object-center h-full w-full"
               width={1200}
               height={500}
-              src="/bg.png"
+              src="profile_site/bg.png"
             />
           </div>
           <div className="flex flex-col sm:flex-row mt-10">
@@ -31,7 +31,7 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   width={1200}
                   height={1200}
-                  src="/profile.png"
+                  src="profile_site/profile.png"
                 />
               </div>
               <div className="flex flex-col items-center text-center justify-center">
