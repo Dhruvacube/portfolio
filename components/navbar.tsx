@@ -58,11 +58,7 @@ const Navbar = () => {
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
-<<<<<<< HEAD:components/navbar.tsx
                 {/* skipcq: JS-0415 */} <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-=======
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
->>>>>>> 3722f9dbe4d850669b6d7b1b4df20c99bc64469a:components/navbar.js
               </svg>
               <svg
                 id="theme-toggle-light-icon"
