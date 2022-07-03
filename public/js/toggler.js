@@ -1,4 +1,4 @@
-let themeToggleDarkIcon  = document.getElementById("theme-toggle-dark-icon");
+let themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 let themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
 // Change the icons inside the button based on previous settings
