@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["raw.githubusercontent.com", "tailwindui.com"],
+    domains: ["raw.githubusercontent.com"],
   },
   experimental: {
     nextScriptWorkers: true,

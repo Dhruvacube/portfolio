@@ -1,7 +1,8 @@
+import type { NextPage } from 'next'
 import Image from "next/image";
 import Head from "next/head";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <section className="text-gray-600 body-font">
       <Head>
@@ -23,12 +24,7 @@ export default function Home() {
               <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
                 <Image
                   alt="profile image"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
                   className="h-full w-full"
-                  viewBox="0 0 24 24"
                   width={1200}
                   height={1200}
                   src="/profile.png"
@@ -313,5 +309,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+
+export default Home

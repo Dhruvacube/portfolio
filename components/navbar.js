@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800">
+    <nav >
       <Script src="/js/toggler.js" />
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
@@ -21,13 +21,13 @@ const Navbar = () => {
                 </Link>
 
                 <Link href="#">
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <a className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Resume
                   </a>
                 </Link>
 
-                <Link href="#">
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/projects">
+                  <a className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Projects
                   </a>
                 </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Blogs
                   </a>
@@ -100,7 +100,7 @@ const Navbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Link href="/">
             <a
-              className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+              className=" text-white block px-3 py-2 rounded-md text-base font-medium"
               aria-current="page"
             >
               Home
@@ -113,7 +113,7 @@ const Navbar = () => {
             </a>
           </Link>
 
-          <Link href="#">
+          <Link href="/projects">
             <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Projects
             </a>

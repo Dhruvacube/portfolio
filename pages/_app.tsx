@@ -1,10 +1,11 @@
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
+import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps: { ...pageProps } }) {
-  const description =
-    "A discord.py bot developer and a full stack web developer using python";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  const description = "A discord.py bot developer and a full stack web developer using python";
 
   return (
     <section>
