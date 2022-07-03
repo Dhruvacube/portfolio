@@ -1,3 +1,3 @@
 export default function Projects() {
-    return (<section />)
+  return <section />;
 }
