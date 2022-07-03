@@ -34,7 +34,7 @@ const Home: NextPage = () => {
                 <h2 className="font-medium title-font mt-4 text-gray-900 text-5xl dark:text-white">
                   Dhruva Shaw
                 </h2>
-                <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                {/* skipcq: JS-0415 */} <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                 <p className="text-base dark:text-slate-300">
                   A discord.py bot developer and a full stack web developer
                   using python
