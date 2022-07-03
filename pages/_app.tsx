@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const description = "A discord.py bot developer and a full stack web developer using python";
+  const description = "A discord.py bot & full-stack developer on python myself a Robotics & Automation Engg undergrad student";
 
   return (
     <section>
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <meta property="og:title" content="Dhruva Shaw" />
         <meta property="og:type" content="Website" />
-        <meta property="og:description" content="" />
+        <meta property="og:description" content={description} />
         <meta
           property="og:image"
           itemProp="image"

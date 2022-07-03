@@ -30,3 +30,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#next.js ts ignore script
+*.d.ts
+
+# typescript
+*.tsbuildinfo
