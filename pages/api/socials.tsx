@@ -7,7 +7,7 @@ type Data = {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  fs.readFile("public/data/tech_stack.json", 'utf-8', (err, data) => {
+  fs.readFile("public/data/socials.json", 'utf-8', (err, data) => {
     res.status(200).json(JSON.parse(data));
   })
 }

@@ -1,47 +1,98 @@
 {
     "dev.to": {
         "name": "dev-to",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://dev.to/dhruvacube"
     },
     "github": {
         "name": "github",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://github.com/Dhruvacube"
     },
     "youtube": {
         "name": "youtube",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://www.youtube.com/c/DhruvaShaw"
     },
     "discord server": {
         "name": "discord",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://discord.gg/vfXHwS3nmQ"
     },
     "discord profile": {
         "name": "discord-alt",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://discord.com/users/887549958931247137"
     },
     "stackoverflow": {
         "name": "stack-overflow",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://stackoverflow.com/users/12978554/miku-chan"
     },
     "instagram" :{     
         "name": "instagram",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://www.instagram.com/dhruva_shaw_/"
     },
     "twitter" :{     
         "name": "twitter",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://twitter.com/DhruvaShaw"
     },
     "linkedin" :{     
         "name": "linkedin",
-        "boxicons": "true",
+        "boxicons": true,
+        "devicons": false,
         "url": "https://www.linkedin.com/in/dhruva-shaw-932682230/"
+    },
+    "arduino" :{     
+        "name": "arduino-plain",
+        "boxicons": false,
+        "devicons": true,
+        "url": "https://forum.arduino.cc/u/dhruvacube"
+    },
+    "world cube association" :{     
+        "name": "wca.svg",
+        "boxicons": false,
+        "devicons": false,
+        "url": "https://www.worldcubeassociation.org/persons/2016SHAW01"
+    },
+    "scratch" :{     
+        "name": "scratch.svg",
+        "boxicons": false,
+        "devicons": false,
+        "url": "https://scratch.mit.edu/users/Dhruvacuber/"
+    },
+    "velosofy" :{     
+        "name": "velosofy.webp",
+        "boxicons": false,
+        "devicons": false,
+        "url": "https://www.velosofy.com/user/DhruvaShaw"
+    },
+    "my waifu list" :{     
+        "name": "mywaifulist.svg",
+        "boxicons": false,
+        "devicons": false,
+        "url": "https://mywaifulist.moe/user/93744"
+    },
+    "imgur" :{     
+        "name": "imgur.svg",
+        "boxicons": false,
+        "devicons": false,
+        "url": "https://imgur.com/user/DhruvaShaw/posts"
+    },
+    "my anime list" :{     
+        "name": "mal.webp",
+        "boxicons": false,
+        "devicons": false,
+        "url": "https://myanimelist.net/profile/DhruvaShaw"
     }
 }
