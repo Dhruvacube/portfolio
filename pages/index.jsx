@@ -3,10 +3,11 @@ import Image from "next/image";
 // import type { NextPageContext } from 'next';
 // import type {IncomingMessage} from 'http';
 import Head from "next/head";
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import * as fs from 'fs';
 
 const Home = (props) => {
-  const [data, setdata] = useState(props.data)
+  const [data, setdata] = useState(props.return_data)
   return (
     <section className="text-gray-600 body-font">
       <Head>
@@ -75,15 +76,10 @@ const Home = (props) => {
   )
 }
 
-export async function getServerSideProps({ req }) {
-  //Fetch data from external API
-  const protocol = req.headers['x-forwarded-proto'] || 'http'
-  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
-  const res = await fetch(baseUrl+'/api/tech_stacks')
-  const data = await res.json()
-
-  // Pass data to the page via props
-  return { props: { data } }
+export async function getStaticProps({ req }) {
+  var data = await fs.promises.readFile("public/data/tech_stack.json", 'utf-8');
+  const return_data = JSON.parse(data).tech_stacks
+  return { props: { return_data } }
 }
 
 export default Home
