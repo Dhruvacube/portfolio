@@ -6,8 +6,7 @@ type Data = {
   name: string
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  fs.readFile("public/data/socials.json", 'utf-8', (err, data) => {
-    res.status(200).json(JSON.parse(data));
-  })
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+  let data = await fs.promises.readFile("public/data/socials.json", 'utf-8');
+  res.status(200).json(JSON.parse(data));
 }

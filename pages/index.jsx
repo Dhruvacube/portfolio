@@ -1,9 +1,12 @@
-import type { NextPage } from 'next'
+// import type { NextPage } from 'next'
 import Image from "next/image";
+// import type { NextPageContext } from 'next';
+// import type {IncomingMessage} from 'http';
 import Head from "next/head";
-import TextStacks from "../components/tech_stacks";
+import React, {useState} from 'react'
 
-const Home: NextPage = () => {
+const Home = (props) => {
+  const [data, setdata] = useState(props.data)
   return (
     <section className="text-gray-600 body-font">
       <Head>
@@ -37,22 +40,50 @@ const Home: NextPage = () => {
                 </h2>
                 {/* skipcq: JS-0415 */} <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                 <p className="text-base dark:text-slate-300">
-                A discord.py bot &amp; full-stack developer on python myself a Robotics &amp; Automation Engg undergrad student
+                  A discord.py bot &amp; full-stack developer on python myself a Robotics &amp; Automation Engg undergrad student
                 </p>
               </div>
             </div>
             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
               <p className="leading-relaxed text-lg mb-4 dark:text-gray-300">
-              Warm greetings from Dhruva Shaw<br/>
-              Myself a natural discord.py bot developer and a full stack developer using python. A Robotics Engineering undergrad student, my passion is with Electronics Automation and software projects related to the automation while using in-built AI. Writeups and researches related to my projects are open-sourced and available for all towards a positive contribution. Head over to my github for a detailed insight.
+                Warm greetings from Dhruva Shaw<br />
+                Myself a natural discord.py bot developer and a full stack developer using python. A Robotics Engineering undergrad student, my passion is with Electronics Automation and software projects related to the automation while using in-built AI. Writeups and researches related to my projects are open-sourced and available for all towards a positive contribution. Head over to my github for a detailed insight.
               </p>
-              <TextStacks/>
+              <span className="font-medium title-font mt-4 text-gray-900 text-lg dark:text-white">
+                Tools Handled &amp; In-Use by me :
+              </span>
+              <hr />
+              <br />
+              <p>
+              {data.map((item) => {
+                return (
+                  <Image
+                  key={item.name}
+                  src={"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/"+item.rel_path+".svg"}
+                  alt={item.name}
+                  title={item.name}
+                  width="40"
+                  height="40"
+                />
+                )})}
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
   )
+}
+
+export async function getServerSideProps({ req }) {
+  //Fetch data from external API
+  const protocol = req.headers['x-forwarded-proto'] || 'http'
+  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
+  const res = await fetch(baseUrl+'/api/tech_stacks')
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
 }
 
 export default Home
