@@ -1,0 +1,47 @@
+{
+    "dev.to": {
+        "name": "dev-to",
+        "boxicons": "true",
+        "url": "https://dev.to/dhruvacube"
+    },
+    "github": {
+        "name": "github",
+        "boxicons": "true",
+        "url": "https://github.com/Dhruvacube"
+    },
+    "youtube": {
+        "name": "youtube",
+        "boxicons": "true",
+        "url": "https://www.youtube.com/c/DhruvaShaw"
+    },
+    "discord server": {
+        "name": "discord",
+        "boxicons": "true",
+        "url": "https://discord.gg/vfXHwS3nmQ"
+    },
+    "discord profile": {
+        "name": "discord-alt",
+        "boxicons": "true",
+        "url": "https://discord.com/users/887549958931247137"
+    },
+    "stackoverflow": {
+        "name": "stack-overflow",
+        "boxicons": "true",
+        "url": "https://stackoverflow.com/users/12978554/miku-chan"
+    },
+    "instagram" :{     
+        "name": "instagram",
+        "boxicons": "true",
+        "url": "https://www.instagram.com/dhruva_shaw_/"
+    },
+    "twitter" :{     
+        "name": "twitter",
+        "boxicons": "true",
+        "url": "https://twitter.com/DhruvaShaw"
+    },
+    "linkedin" :{     
+        "name": "linkedin",
+        "boxicons": "true",
+        "url": "https://www.linkedin.com/in/dhruva-shaw-932682230/"
+    }
+}
