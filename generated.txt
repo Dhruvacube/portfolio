@@ -1,0 +1,13 @@
+LICENSE
+README.md
+components
+generated.txt
+next.config.js
+package.json
+pages
+postcss.config.js
+public
+styles
+tailwind.config.js
+tsconfig.json
+yarn.lock
