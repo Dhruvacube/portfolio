@@ -520,6 +520,11 @@ core-js-pure@^3.20.2:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.23.3.tgz#bcd02d3d8ec68ad871ef50d5ccbb248ddb54f401"
   integrity sha512-XpoouuqIj4P+GWtdyV8ZO3/u4KftkeDVMfvp+308eGMhCrA3lVDSmAxO0c6GGOcmgVlaKDrgWVMo49h2ab/TDA==
 
+create-next-app@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-12.2.0.tgz#288c53fc9b2e9319a50e90f5663f95cd571ef1d4"
+  integrity sha512-1svrGr76MJeXzb14/fCDETL9/4Tult6fByQ472O7xZafbdGvi0y9oHPqFvD1R+8CMLH9KTMmcArudh1f4ADB4A==
+
 cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
