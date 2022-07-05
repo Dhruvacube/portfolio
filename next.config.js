@@ -7,7 +7,7 @@ const nextConfig = {
   experimental: {
     nextScriptWorkers: true,
     images: {
-      unoptimized: Boolean(process.env.LOCAL) ? false : true,
+      unoptimized: Boolean(Number(process.env.LOCAL)) ? false : true,
     },
   },
 };

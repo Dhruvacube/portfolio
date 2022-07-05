@@ -77,7 +77,7 @@ const Home = (props) => {
 }
 
 export async function getStaticProps({ req }) {
-  var data = await fs.promises.readFile("public/data/tech_stack.json", 'utf-8');
+  let data = await fs.promises.readFile("public/data/tech_stack.json", 'utf-8');
   const return_data = JSON.parse(data).tech_stacks
   return { props: { return_data } }
 }
