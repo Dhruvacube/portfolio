@@ -8,9 +8,6 @@ on:
 jobs:
   dists-and-docs:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./portfolio
     strategy:
       fail-fast: false
       matrix:
@@ -28,9 +25,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: |
-          yarn install
-
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      
       - name: Build site
-        run: |
-          yarn build
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: build # will run `yarn build` command
