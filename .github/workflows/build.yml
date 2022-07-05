@@ -27,6 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          ls
           yarn install
       - name: Build site
         run: |
