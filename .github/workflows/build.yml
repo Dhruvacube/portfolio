@@ -26,9 +26,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
+        shell: bash
         run: |
           yarn add "@builder.io/partytown" "@types/node" "@types/react" autoprefixer eslint eslint-config-next postcss tailwindcss typescript next react react-dom sharp
 
       - name: Build site
+        shell: bash
         run: |
           yarn build
