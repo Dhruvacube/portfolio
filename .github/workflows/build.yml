@@ -8,6 +8,7 @@ on:
 jobs:
   dists-and-docs:
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
@@ -25,11 +26,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: install # will run `yarn install` command
-      
+        run: |
+          yarn add "@builder.io/partytown" "@types/node" "@types/react" autoprefixer eslint eslint-config-next postcss tailwindcss typescript next react react-dom sharp
+
       - name: Build site
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: build # will run `yarn build` command
+        run: |
+          yarn build
