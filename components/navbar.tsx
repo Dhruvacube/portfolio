@@ -4,6 +4,8 @@ import Link from "next/link";
 import { NextComponentType } from "next";
 
 const Navbar: NextComponentType = () => {
+  const support_url = "https://ko-fi.com/mikuchan";
+  const blog_url = "https://dhruvashaw.hashnode.dev/"
   return (
     <nav>
       <Script src="/js/toggler.js" />
@@ -33,7 +35,7 @@ const Navbar: NextComponentType = () => {
                   </a>
                 </Link>
 
-                <Link href="https://dhruvashaw.hashnode.dev/">
+                <Link href={blog_url}>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -43,7 +45,7 @@ const Navbar: NextComponentType = () => {
                   </a>
                 </Link>
 
-                <Link href="https://ko-fi.com/mikuchan">
+                <Link href={support_url}>
                   <a target="_blank" className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Support Us
                   </a>
@@ -126,7 +128,7 @@ const Navbar: NextComponentType = () => {
             </a>
           </Link>
             <hr/>
-          <Link href="https://dhruvashaw.hashnode.dev/">
+          <Link href={blog_url}>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -136,7 +138,7 @@ const Navbar: NextComponentType = () => {
             </a>
           </Link>
             <hr/>
-          <Link href="https://ko-fi.com/mikuchan">
+          <Link href={support_url}>
             <a target="_blank" className="block px-3 py-2 rounded-md text-base font-medium">
               Support Us
             </a>

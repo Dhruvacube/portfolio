@@ -32,7 +32,7 @@ const Footer = (props) => {
 
 export async function getStaticProps() {
   let data = await fs.promises.readFile("public/data/socials.json", 'utf-8');
-  const return_data = JSON.parse(data);
+  const return_data = JSON.parse(data).socials;
   return { props: { return_data } };
 }
 
