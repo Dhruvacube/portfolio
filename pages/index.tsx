@@ -6,7 +6,16 @@ import Head from "next/head";
 import React, { useState } from "react";
 import * as fs from "fs";
 
-const Home = (props) => {
+type Props = {
+  return_data: [] 
+}
+
+type Item = {
+  name: string,
+  rel_path: string
+}
+
+const Home = (props: Props) => {
   const [data, setdata] = useState(props.return_data);
   return (
     <section className="text-gray-600 body-font">
@@ -65,7 +74,7 @@ const Home = (props) => {
               <hr />
               <br />
               <p>
-                {data.map((item) => {
+                {data.map((item: Item) => {
                   return (
                     <Image
                       key={item.name}
@@ -90,7 +99,7 @@ const Home = (props) => {
   );
 };
 
-export async function getStaticProps({ req }) {
+export async function getStaticProps() {
   let data = await fs.promises.readFile("public/data/tech_stack.json", "utf-8");
   const return_data = JSON.parse(data).tech_stacks;
   return { props: { return_data } };

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import { NextComponentType } from "next";
 
-const Navbar = () => {
+const Navbar: NextComponentType = () => {
   return (
     <nav>
       <Script src="/js/toggler.js" />

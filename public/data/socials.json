@@ -1,98 +1,116 @@
 {
-  "dev.to": {
-    "name": "dev-to",
+  "socials" : [
+  {
+    "name": "Dev.to",
+    "file_icon_name": "dev-to",
     "boxicons": true,
     "devicons": false,
     "url": "https://dev.to/dhruvacube"
   },
-  "github": {
-    "name": "github",
+  {
+    "name": "Github",
+    "file_icon_name": "github",
     "boxicons": true,
     "devicons": false,
     "url": "https://github.com/Dhruvacube"
   },
-  "youtube": {
-    "name": "youtube",
+  {
+    "name": "Youtube",
+    "file_icon_name": "youtube",
     "boxicons": true,
     "devicons": false,
     "url": "https://www.youtube.com/c/DhruvaShaw"
   },
-  "discord server": {
-    "name": "discord",
+  {
+    "name": "Discord Server",
+    "file_icon_name": "discord",
     "boxicons": true,
     "devicons": false,
     "url": "https://discord.gg/vfXHwS3nmQ"
   },
-  "discord profile": {
-    "name": "discord-alt",
+  {
+    "name": "Discord Profile",
+    "file_icon_name": "discord-alt",
     "boxicons": true,
     "devicons": false,
     "url": "https://discord.com/users/887549958931247137"
   },
-  "stackoverflow": {
-    "name": "stack-overflow",
+  {
+    "name": "Stackoverflow",
+    "file_icon_name": "stack-overflow",
     "boxicons": true,
     "devicons": false,
     "url": "https://stackoverflow.com/users/12978554/miku-chan"
   },
-  "instagram": {
-    "name": "instagram",
+  {
+    "name": "Instagram",
+    "file_icon_name": "instagram",
     "boxicons": true,
     "devicons": false,
     "url": "https://www.instagram.com/dhruva_shaw_/"
   },
-  "twitter": {
-    "name": "twitter",
+  {
+    "name": "Twitter",
+    "file_icon_name": "twitter",
     "boxicons": true,
     "devicons": false,
     "url": "https://twitter.com/DhruvaShaw"
   },
-  "linkedin": {
-    "name": "linkedin",
+  {
+    "name": "LinkedIn",
+    "file_icon_name": "linkedin",
     "boxicons": true,
     "devicons": false,
     "url": "https://www.linkedin.com/in/dhruva-shaw-932682230/"
   },
-  "arduino": {
-    "name": "arduino-plain",
+  {
+    "name": "Arduino Forums",
+    "file_icon_name": "arduino-plain",
     "boxicons": false,
     "devicons": true,
     "url": "https://forum.arduino.cc/u/dhruvacube"
   },
-  "world cube association": {
-    "name": "wca.svg",
+  {
+    "name": "World Cube Association",
+    "file_icon_name": "wca.svg",
     "boxicons": false,
     "devicons": false,
     "url": "https://www.worldcubeassociation.org/persons/2016SHAW01"
   },
-  "scratch": {
-    "name": "scratch.svg",
+  {
+    "name": "Scratch",
+    "file_icon_name": "scratch.svg",
     "boxicons": false,
     "devicons": false,
     "url": "https://scratch.mit.edu/users/Dhruvacuber/"
   },
-  "velosofy": {
-    "name": "velosofy.webp",
+  {
+    "name": "Velosofy",
+    "file_icon_name": "velosofy.webp",
     "boxicons": false,
     "devicons": false,
     "url": "https://www.velosofy.com/user/DhruvaShaw"
   },
-  "my waifu list": {
-    "name": "mywaifulist.svg",
+  {
+    "name": "My Waifu List",
+    "file_icon_name": "mywaifulist.svg",
     "boxicons": false,
     "devicons": false,
     "url": "https://mywaifulist.moe/user/93744"
   },
-  "imgur": {
-    "name": "imgur.svg",
+  {
+    "name": "Imgur",
+    "file_icon_name": "imgur.svg",
     "boxicons": false,
     "devicons": false,
     "url": "https://imgur.com/user/DhruvaShaw/posts"
   },
-  "my anime list": {
-    "name": "mal.webp",
+  {
+    "name": "My Anime List",
+    "file_icon_name": "mal.webp",
     "boxicons": false,
     "devicons": false,
     "url": "https://myanimelist.net/profile/DhruvaShaw"
   }
+]
 }
