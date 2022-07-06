@@ -78,7 +78,7 @@ var Socials = [
   },
   {
     name: "Scratch",
-    file_icon_name: "scratch.svg",
+    file_icon_name: "scratch.webp",
     boxicons: false,
     devicons: false,
     url: "https://scratch.mit.edu/users/Dhruvacuber/",
@@ -92,14 +92,14 @@ var Socials = [
   },
   {
     name: "My Waifu List",
-    file_icon_name: "mywaifulist.svg",
+    file_icon_name: "mywaifulist.webp",
     boxicons: false,
     devicons: false,
     url: "https://mywaifulist.moe/user/93744",
   },
   {
     name: "Imgur",
-    file_icon_name: "imgur.svg",
+    file_icon_name: "imgur.webp",
     boxicons: false,
     devicons: false,
     url: "https://imgur.com/user/DhruvaShaw/posts",
