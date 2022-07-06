@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Head from "next/head";
-import React, { useState } from "react";
+import { get_item, get_element } from "../components/footer"
 import TechStacks from "../components/tech_stacks";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -36,11 +37,26 @@ const Home = () => {
                   Dhruva Shaw
                 </h2>
                 {/* skipcq: JS-0415 */}{" "}
-                <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" />
                 <p className="text-base dark:text-slate-300">
                   A discord.py bot &amp; full-stack developer on python myself a
                   Robotics &amp; Automation Engg undergrad student
                 </p>
+              </div>
+              <div className="text-left">
+                <Link href={get_item('github').url} >
+                  <a target="_blank" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
+                    {get_element(get_item('github'), 'text-xl')} &nbsp;GitHub <i className='bx bx-link-external' />
+                  </a>
+                </Link>
+                <Link href={get_item('linkedin').url} >
+                  <a target="_blank" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
+                    {get_element(get_item('linkedin'), 'text-xl')} &nbsp;LinkedIn <i className='bx bx-link-external' />
+                  </a>
+                </Link>
+                <a id="resume" href="/#resume" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
+                  <i className='bx bx-notepad' /> &nbsp;Full Resume
+                </a>
               </div>
             </div>
             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
@@ -55,7 +71,7 @@ const Home = () => {
                 and available for all towards a positive contribution. Head over
                 to my github for a detailed insight.
               </p>
-              <TechStacks/>
+              <TechStacks />
             </div>
           </div>
         </div>

@@ -12,25 +12,27 @@ type Item = {
   "url": string
 }
 
-const data = Socials;
-const hover_css = 'hover:text-gray-900 hover:text-4xl';
+export const data = Socials;
+const hover_css = 'hover:dark:text-gray-900 hover:text-4xl hover:text-sky-700';
+const hover_css_2 = ' transition-all ease-in duration-75';
 
-export function get_element(item: Item) {
-  if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' text-3xl '+hover_css} key={item.name} title={item.name} /> }
-  if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' text-3xl '+hover_css} key={item.name} title={item.name} /> }
+export function get_element(item: Item, text_class = 'text-3xl') {
+  if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' ' + text_class + ' ' +hover_css+hover_css_2} key={item.name} title={item.name} /> }
+  if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' ' + text_class + ' ' +hover_css+hover_css_2} key={item.name} title={item.name} /> }
 }
 
 export function get_image_element(item: Item) {
-  if (!item.boxicons && !item.devicons) { return <Image alt={item.name} src={"/svg/" + item.file_icon_name} width={40} height={40} key={item.name} title={item.name} className={item.file_icon_name == 'mywaifulist.webp' ? 'dark:bg-transparent bg-black rounded-full	dark:rounded-none' : ''} /> }
+  if (!item.boxicons && !item.devicons) { return <Image alt={item.name} src={"/svg/" + item.file_icon_name} width={40} height={40} key={item.name} title={item.name} className={item.file_icon_name == 'mywaifulist.webp' ? 'dark:bg-transparent bg-black rounded-full	dark:rounded-non ' : '' } /> }
 }
 
 export function get_item(item_name: String) {
+  var item_return = { "name": "", "file_icon_name": "", "boxicons": false, "devicons": false, "url": "#" }
   data.map((item) => {
-    if (item.name.toLowerCase() == item_name.toLowerCase()) {
-      return item
+    if (item.file_icon_name.toLowerCase() == item_name.toLowerCase()) {
+      item_return = item;
     }
   })
-  return { "name": "", "file_icon_name": "", "boxicons": false, "devicons": false, "url": "#" }
+  return item_return
 }
 
 
