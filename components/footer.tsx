@@ -26,7 +26,7 @@ const Footer = () => {
           <span className="ml-3 text-xl">Dhruva Shaw</span>
         </a>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 dark:text-white">
-          © <span id="yearid"><Script strategy="worker">{`span = document.getElementById("yearid");txt = document.createTextNode(new Date().getFullYear());span.appendChild(txt);`}</Script></span> —
+          © <span id="yearid"><Script strategy="worker" id="putyearid">{`span = document.getElementById("yearid");txt = document.createTextNode(new Date().getFullYear());span.appendChild(txt);`}</Script></span> —
           <Link href="https://twitter.com/DhruvaShaw">
             <a
               className="text-gray-600 ml-1 dark:text-white"
@@ -40,8 +40,8 @@ const Footer = () => {
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {data.map((item) => {
             return (
-              <Link href={item.url}>
-              <a className="text-gray-500 dark:text-gray-400" target="_blank">
+              <Link href={item.url} key={item.name}>
+              <a className="text-gray-500 dark:text-gray-400" target="_blank" title={item.name} key={item.name}>
                 {get_element(item)}
               </a>
               </Link>
