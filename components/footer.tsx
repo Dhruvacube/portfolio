@@ -11,12 +11,12 @@ type Item = {
   "url": string
 }
 
-function get_element(item: Item) {
+export function get_element(item: Item) {
   if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' text-3xl'} key={item.name} title={item.name} /> }
   if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' text-3xl'} key={item.name} title={item.name} /> }
 }
 
-function get_image_element(item: Item) {
+export function get_image_element(item: Item) {
   if (!item.boxicons && !item.devicons) { return <Image alt={item.name} src={"/svg/" + item.file_icon_name} width={40} height={40} key={item.name} title={item.name} className={item.file_icon_name == 'mywaifulist.webp' ? 'dark:bg-transparent bg-black rounded-full	dark:rounded-none' : ''} /> }
 }
 
