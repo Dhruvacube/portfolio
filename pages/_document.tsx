@@ -11,6 +11,7 @@ export default function Document() {
           href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
         <Script strategy="beforeInteractive" id="theme-toggler">
           {`if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
               document.documentElement.classList.add('dark');
