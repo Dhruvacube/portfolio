@@ -1,22 +1,19 @@
-// import type { NextPage } from 'next'
 import Image from "next/image";
-// import type { NextPageContext } from 'next';
-// import type {IncomingMessage} from 'http';
 import Head from "next/head";
 import React, { useState } from "react";
-import * as fs from "fs";
+import TechStacks from "../components/tech_stacks";
 
 type Props = {
   return_data: [] 
 }
 
-type Item = {
+export type Item = {
   name: string,
   rel_path: string
 }
 
-const Home = (props: Props) => {
-  const [data, setdata] = useState(props.return_data);
+const Home = () => {
+  // const [data, setdata] = useState(props.return_data);
   return (
     <section className="text-gray-600 body-font">
       <Head>
@@ -68,29 +65,7 @@ const Home = (props: Props) => {
                 and available for all towards a positive contribution. Head over
                 to my github for a detailed insight.
               </p>
-              <span className="font-medium title-font mt-4 text-gray-900 text-lg dark:text-white">
-                Tools Handled &amp; In-Use by me :
-              </span>
-              <hr />
-              <br />
-              <p>
-                {data.map((item: Item) => {
-                  return (
-                    <Image
-                      key={item.name}
-                      src={
-                        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/" +
-                        item.rel_path +
-                        ".svg"
-                      }
-                      alt={item.name}
-                      title={item.name}
-                      width="40"
-                      height="40"
-                    />
-                  );
-                })}
-              </p>
+              <TechStacks/>
             </div>
           </div>
         </div>
@@ -98,11 +73,5 @@ const Home = (props: Props) => {
     </section>
   );
 };
-
-export async function getStaticProps() {
-  let data = await fs.promises.readFile("public/data/tech_stack.json", "utf-8");
-  const return_data = JSON.parse(data).tech_stacks;
-  return { props: { return_data } };
-}
 
 export default Home;

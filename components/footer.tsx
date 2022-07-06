@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import Socials from "../public/data/socials"
 
+
 type Item = {
   "name": string,
   "file_icon_name": string,
@@ -10,6 +11,8 @@ type Item = {
   "devicons": boolean,
   "url": string
 }
+
+const data = Socials;
 
 export function get_element(item: Item) {
   if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' text-3xl'} key={item.name} title={item.name} /> }
@@ -20,9 +23,17 @@ export function get_image_element(item: Item) {
   if (!item.boxicons && !item.devicons) { return <Image alt={item.name} src={"/svg/" + item.file_icon_name} width={40} height={40} key={item.name} title={item.name} className={item.file_icon_name == 'mywaifulist.webp' ? 'dark:bg-transparent bg-black rounded-full	dark:rounded-none' : ''} /> }
 }
 
+export function get_item(item_name: String) {
+  data.map((item) => {
+    if (item.name.toLowerCase() == item_name.toLowerCase()) {
+      return item
+    }
+  })
+  return { "name": "", "file_icon_name": "", "boxicons": false, "devicons": false, "url": "#" }
+}
+
 
 const Footer = () => {
-  const data = Socials;
   return (
     <footer className="text-gray-600 body-font dark:text-white">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
@@ -32,7 +43,7 @@ const Footer = () => {
         </a>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 dark:text-white">
           © <span id="yearid"><Script strategy="worker" id="putyearid">{`span = document.getElementById("yearid");txt = document.createTextNode(new Date().getFullYear());span.appendChild(txt);`}</Script></span> —
-          <Link href="https://twitter.com/DhruvaShaw">
+          <Link href={get_item("twitter").url}>
             <a
               className="text-gray-600 ml-1 dark:text-white"
               rel="noopener noreferrer"
