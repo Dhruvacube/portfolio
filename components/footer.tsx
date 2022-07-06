@@ -1,11 +1,23 @@
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import React, { useState } from "react";
-import * as fs from "fs";
+import Socials from "../public/data/socials"
 
-const Footer = (props) => {
-  const [data, setdata] = useState(props.return_data);
+type Item = {
+  "name": string,
+  "file_icon_name": string,
+  "boxicons": boolean,
+  "devicons": boolean,
+  "url": string
+}
+function get_element(item: Item) {
+  if (item.boxicons) {return <i className={'bx bxl-'+item.file_icon_name + ' text-3xl'} key={item.name} title={item.name} ></i>}
+  if (item.devicons) {return <i className={'devicon-'+item.file_icon_name+ ' text-3xl'} key={item.name} title={item.name}></i>}
+  // return <Image src={"/svg/"+item.file_icon_name} width={20} height={20} key={item.name} title={item.name}/>
+}
+
+const Footer = () => {
+  const data = Socials;
   return (
     <footer className="text-gray-600 body-font dark:text-white">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
@@ -28,18 +40,11 @@ const Footer = (props) => {
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {data.map((item) => {
             return (
-              <a className="text-gray-500 dark:text-gray-400">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
+              <Link href={item.url}>
+              <a className="text-gray-500 dark:text-gray-400" target="_blank">
+                {get_element(item)}
               </a>
+              </Link>
             )
             })}
           
@@ -48,11 +53,5 @@ const Footer = (props) => {
     </footer>
   );
 };
-
-export async function getStaticProps() {
-  let data = await fs.promises.readFile("public/data/socials.json", "utf-8");
-  const return_data = JSON.parse(data).socials;
-  return { props: { return_data } };
-}
 
 export default Footer;

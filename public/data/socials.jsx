@@ -1,5 +1,4 @@
-{
-  "socials" : [
+var Socials = [
   {
     "name": "Dev.to",
     "file_icon_name": "dev-to",
@@ -113,4 +112,5 @@
     "url": "https://myanimelist.net/profile/DhruvaShaw"
   }
 ]
-}
+
+export default Socials;
