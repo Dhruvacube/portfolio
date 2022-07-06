@@ -3,17 +3,7 @@ import Head from "next/head";
 import React, { useState } from "react";
 import TechStacks from "../components/tech_stacks";
 
-type Props = {
-  return_data: [] 
-}
-
-export type Item = {
-  name: string,
-  rel_path: string
-}
-
 const Home = () => {
-  // const [data, setdata] = useState(props.return_data);
   return (
     <section className="text-gray-600 body-font">
       <Head>

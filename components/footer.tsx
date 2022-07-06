@@ -13,10 +13,11 @@ type Item = {
 }
 
 const data = Socials;
+const hover_css = 'hover:text-gray-900 hover:text-4xl';
 
 export function get_element(item: Item) {
-  if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' text-3xl'} key={item.name} title={item.name} /> }
-  if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' text-3xl'} key={item.name} title={item.name} /> }
+  if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' text-3xl '+hover_css} key={item.name} title={item.name} /> }
+  if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' text-3xl '+hover_css} key={item.name} title={item.name} /> }
 }
 
 export function get_image_element(item: Item) {

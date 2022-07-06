@@ -1,17 +1,15 @@
 import React from 'react';
 import Image from "next/image";
-import readFile from "fs";
+import { TechStacksArray } from '../public/data/tech_stack';
 
+type Item = {
+    name: string,
+    rel_path: string
+}
+
+const data = TechStacksArray;
 
 function TechStacks() {
-    let data = readFile("public/data/tech_stack.json", 'utf8', (err, data) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        return data;
-      });
-    const return_data = JSON.parse(data).tech_stacks;
     return (
         <section>
             <span className="font-medium title-font mt-4 text-gray-900 text-lg dark:text-white">
@@ -20,7 +18,7 @@ function TechStacks() {
             <hr />
             <br />
             <p>
-                {return_data.map((item) => {
+                {data.map((item: Item) => {
                     return (
                         <Image
                             key={item.name}

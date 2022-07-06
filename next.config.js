@@ -10,11 +10,11 @@ const nextConfig = {
       unoptimized: Boolean(Number(process.env.LOCAL)) ? false : true,
     },
   },
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false, path: false, stream: false, constants: false };
-    return config;
+  // webpack: (config) => {
+  //   config.resolve.fallback = { fs: false, path: false, stream: false, constants: false };
+  //   return config;
 
-  }
+  // }
 };
 
 module.exports = nextConfig;

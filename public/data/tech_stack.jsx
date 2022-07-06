@@ -1,5 +1,4 @@
-{
-  "tech_stacks": [
+export const TechStacksArray = [
     {
       "name": "python",
       "rel_path": "python/python-original-wordmark"
@@ -161,4 +160,3 @@
       "rel_path": "arduino/arduino-plain"
     }
   ]
-}
