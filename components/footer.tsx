@@ -16,9 +16,9 @@ export const data = Socials;
 const hover_css = 'hover:dark:text-gray-900 hover:text-4xl hover:text-sky-700';
 const hover_css_2 = ' transition-all ease-in duration-75';
 
-export function get_element(item: Item, text_class = 'text-3xl') {
-  if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' ' + text_class + ' ' +hover_css+hover_css_2} key={item.name} title={item.name} /> }
-  if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' ' + text_class + ' ' +hover_css+hover_css_2} key={item.name} title={item.name} /> }
+export function get_element(item: Item, text_class = 'text-3xl', hover_apply = true) {
+  if (item.boxicons) { return <i className={'bx bxl-' + item.file_icon_name + ' ' + text_class + ' ' +(hover_apply ? hover_css+hover_css_2 : '')} key={item.name} title={item.name} /> }
+  if (item.devicons) { return <i className={'devicon-' + item.file_icon_name + ' ' + text_class + ' ' +(hover_apply ? hover_css+hover_css_2 : '')} key={item.name} title={item.name} /> }
 }
 
 export function get_image_element(item: Item) {
