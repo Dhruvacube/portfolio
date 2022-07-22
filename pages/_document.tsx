@@ -11,6 +11,7 @@ export default function Document() {
           href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
           rel="stylesheet"
         />
+        <Script async strategy="beforeInteractive" src="https://arc.io/widget.min.js#s543iP18"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
         <Script strategy="beforeInteractive" id="theme-toggler">
           {`if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
