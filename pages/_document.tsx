@@ -19,6 +19,7 @@ export default function Document() {
               document.documentElement.classList.remove('dark')
           }`}
         </Script>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2736810871076484" crossOrigin="anonymous" />
       </Head>
       <body className="bg-white dark:text-white body-font dark:from-cyan-500 dark:to-slate-900	dark:via-slate-700 dark:bg-gradient-to-r">
         <Main />

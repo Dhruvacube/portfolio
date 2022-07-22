@@ -36,7 +36,7 @@ const Home = () => {
                 <h2 className="font-medium title-font mt-4 text-gray-900 text-5xl dark:text-white">
                   Dhruva Shaw
                 </h2>
-                {/* skipcq: JS-0415 */}{" "}
+                {/* skipcq: JS-0415 */}
                 <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" />
                 <p className="text-base dark:text-slate-300">
                   A discord.py bot &amp; full-stack developer on python myself a
