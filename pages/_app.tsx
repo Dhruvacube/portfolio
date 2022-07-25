@@ -1,11 +1,28 @@
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import * as gtag from '../lib/gtag'
 import Footer from "../components/footer";
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const description = "A discord.py bot developer and a full stack web developer using python";
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on('hashChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+      router.events.off('hashChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
 
   return (
     <section>
@@ -61,6 +78,25 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Dhruva Shaw" />
         <meta name="copyright" content="Dhruva Shaw" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       </Head>
       <Navbar />
       <Component {...pageProps} />
