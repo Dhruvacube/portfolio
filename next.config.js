@@ -10,8 +10,8 @@ const nextConfig = {
       unoptimized: Boolean(Number(process.env.LOCAL)) ? false : true,
     },
     amp: {
-      skipValidation: true
-    }
+      skipValidation: true,
+    },
   },
   // webpack: (config) => {
   //   config.resolve.fallback = { fs: false, path: false, stream: false, constants: false };

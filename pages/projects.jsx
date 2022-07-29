@@ -5,12 +5,12 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { ThreeDots } from "react-loader-spinner";
 import Link from "next/link";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { useAmp } from 'next/amp';
+import { useAmp } from "next/amp";
 
-export const config = { amp: false }
+export const config = { amp: false };
 
 export default function Projects({ data }) {
-  const isAmp = useAmp()
+  const isAmp = useAmp();
   const [count, setCount] = useState(6);
   const [projects, setProjects] = useState(data.slice(0, count));
   const [hasMore, setHasMore] = useState(true);
