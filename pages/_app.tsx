@@ -2,11 +2,10 @@ import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
 import type { AppProps } from 'next/app';
-import * as gtag from '../lib/gtag'
+import * as gtag from '../lib/gtag';
 import Footer from "../components/footer";
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const description = "A discord.py bot developer and a full stack web developer using python";
@@ -67,7 +66,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="apple-mobile-web-app-title" content="Dhruva Shaw" />
 
         <meta name="distribution" content="global" />
-        <meta name="revisit-after" content="1 day" />
         <meta name="theme-color" content="#0989d9" />
         <meta itemProp="name" content="Dhruva Shaw" />
         <meta itemProp="description" content={description} />
@@ -78,25 +76,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Dhruva Shaw" />
         <meta name="copyright" content="Dhruva Shaw" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-
-        <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-      />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
       </Head>
       <Navbar />
       <Component {...pageProps} />

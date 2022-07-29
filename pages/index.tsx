@@ -3,8 +3,13 @@ import Head from "next/head";
 import { get_item, get_element } from "../components/footer"
 import TechStacks from "../components/tech_stacks";
 import Link from "next/link";
+import { useAmp } from 'next/amp';
+
+export const config = { amp: 'hybrid' }
+
 
 const Home = () => {
+  const isAmp = useAmp()
   return (
     <section className="text-gray-600 body-font">
       <Head>
