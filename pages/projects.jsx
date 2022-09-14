@@ -4,7 +4,6 @@ import Head from "next/head";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ThreeDots } from "react-loader-spinner";
 import Link from "next/link";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { useAmp } from "next/amp";
 
 export const config = { amp: false };
