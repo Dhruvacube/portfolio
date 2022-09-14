@@ -76,6 +76,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Dhruva Shaw" />
         <meta name="copyright" content="Dhruva Shaw" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        
       </Head>
       <Navbar />
       <Component {...pageProps} />
