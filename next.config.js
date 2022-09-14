@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["cdn.jsdelivr.net"],
+    unoptimized: Boolean(Number(process.env.LOCAL)) ? false : true,
   },
+  swcMinify: true,
   experimental: {
     nextScriptWorkers: true,
-    images: {
-      unoptimized: Boolean(Number(process.env.LOCAL)) ? false : true,
-    },
     amp: {
       skipValidation: true,
     },
