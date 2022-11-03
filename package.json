@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/gtag.js": "^0.0.11",
+    "@types/gtag.js": "^0.0.12",
     "create-next-app": "^12.3.1",
     "next": "^13.0.0",
     "react": "^18.2.0",
