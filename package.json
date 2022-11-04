@@ -19,7 +19,7 @@
     "sharp": "^0.31.1"
   },
   "devDependencies": {
-    "@builder.io/partytown": "^0.7.0",
+    "@builder.io/partytown": "^0.7.1",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
     "autoprefixer": "^10.4.12",
