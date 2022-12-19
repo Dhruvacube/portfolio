@@ -60,7 +60,7 @@ var Socials = [
     file_icon_name: "linkedin",
     boxicons: true,
     devicons: false,
-    url: "https://www.linkedin.com/in/dhruva-shaw-932682230/",
+    url: "https://www.linkedin.com/in/dhruva-shaw/",
   },
   {
     name: "Arduino Forums",
