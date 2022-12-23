@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/gtag.js": "^0.0.12",
-    "create-next-app": "^13.0.6",
+    "create-next-app": "^13.1.0",
     "next": "^13.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
