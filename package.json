@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@builder.io/partytown": "^0.7.3",
-    "@types/node": "^18.11.15",
+    "@types/node": "^18.11.19",
     "@types/react": "^18.0.24",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.30.0",
