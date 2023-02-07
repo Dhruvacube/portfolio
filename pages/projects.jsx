@@ -4,7 +4,7 @@ import Head from "next/head";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ThreeDots } from "react-loader-spinner";
 import Link from "next/link";
-import Script from 'next/script';
+import Script from "next/script";
 import { useAmp } from "next/amp";
 
 const { Octokit } = require("@octokit/core");
@@ -71,15 +71,19 @@ export default function Projects({ data }) {
                     />
                     <div className="p-6">
                       <Link href={data.html_url} target="_blank">
-                          <h1 className="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">
-                            {data.full_name}
-                          </h1>
+                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">
+                          {data.full_name}
+                        </h1>
                       </Link>
                       <p className="leading-relaxed mb-3 dark:text-gray-300">
                         {data.description}
                       </p>
                       <div className="flex items-center flex-wrap">
-                      <Link href={data.html_url} target="_blank" className="text-indigo-500 dark:text-indigo-200 border-solid	border-2 border-sky-500 dark:border-gray-300 p-2 rounded inline-flex items-center md:mb-2 lg:mb-0">
+                        <Link
+                          href={data.html_url}
+                          target="_blank"
+                          className="text-indigo-500 dark:text-indigo-200 border-solid	border-2 border-sky-500 dark:border-gray-300 p-2 rounded inline-flex items-center md:mb-2 lg:mb-0"
+                        >
                           Check it out
                           <svg
                             className="w-4 h-4 ml-2"
@@ -107,14 +111,20 @@ export default function Projects({ data }) {
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                           </svg>
-                          <Link href={data.html_url + "/watchers"} target="_blank">
+                          <Link
+                            href={data.html_url + "/watchers"}
+                            target="_blank"
+                          >
                             {data.watchers_count}
                           </Link>
                         </span>
                         <span className="text-black dark:text-gray-300 inline-flex items-center leading-none text-sm">
-                          <Link href={data.html_url + "/stargazers"} target="_blank">
-                              <i className="bx bx-star w-4 h-4"></i>
-                              {data.stargazers_count}
+                          <Link
+                            href={data.html_url + "/stargazers"}
+                            target="_blank"
+                          >
+                            <i className="bx bx-star w-4 h-4"></i>
+                            {data.stargazers_count}
                           </Link>
                         </span>
                       </div>
@@ -139,13 +149,15 @@ export const getStaticProps = async () => {
   ];
   var data = [];
   const octokit = new Octokit({
-    auth: process.env.GITHUB_TOKEN
-  })
+    auth: process.env.GITHUB_TOKEN,
+  });
   for (var i = 0; i < repo_username.length; i++) {
     data = data.concat(
-      (await octokit.request(
-        "GET /users/{user}/repos", {'user': repo_username[i]}
-      )).data
+      (
+        await octokit.request("GET /users/{user}/repos", {
+          user: repo_username[i],
+        })
+      ).data
     );
   }
   return {
