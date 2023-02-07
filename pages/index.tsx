@@ -49,15 +49,11 @@ const Home = () => {
                 </p>
               </div>
               <div className="text-left">
-                <Link href={get_item('github').url} >
-                  <a target="_blank" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
+                <Link href={get_item('github').url} target="_blank" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
                     {get_element(get_item('github'), 'text-xl', false)} &nbsp;GitHub <i className='bx bx-link-external' />
-                  </a>
                 </Link>
-                <Link href={get_item('linkedin').url} >
-                  <a target="_blank" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
+                <Link href={get_item('linkedin').url} target="_blank" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
                     {get_element(get_item('linkedin'), 'text-xl', false)} &nbsp;LinkedIn <i className='bx bx-link-external' />
-                  </a>
                 </Link>
                 <a id="resume" href="#" className="relative hover:bg-gray-300 bg-gray-200 rounded px-4 py-2 inline-flex items-center justify-center mb-2 mt-2 mr-2 overflow-hidden text-lg font-medium text-gray-900">
                   <i className='bx bx-notepad' /> &nbsp;Full Resume

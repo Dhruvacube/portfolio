@@ -4,8 +4,10 @@ import Head from "next/head";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { ThreeDots } from "react-loader-spinner";
 import Link from "next/link";
+import Script from 'next/script';
 import { useAmp } from "next/amp";
 
+const { Octokit } = require("@octokit/core");
 export const config = { amp: false };
 
 export default function Projects({ data }) {
@@ -26,6 +28,12 @@ export default function Projects({ data }) {
       <Head>
         <title>Projects | Dhruva Shaw</title>
       </Head>
+      <Script id="show-banner">
+        {`var aax_size='728x90';
+        var aax_pubname = 'dhruvashaw-21';
+        var aax_src='302';`}
+      </Script>
+      <Script src="http://c.amazon-adsystem.com/aax2/assoc.js" />
       <InfiniteScroll
         dataLength={projects.length}
         next={getMorePost}
@@ -62,18 +70,16 @@ export default function Projects({ data }) {
                       }
                     />
                     <div className="p-6">
-                      <Link href={data.html_url}>
-                        <a target="_blank">
+                      <Link href={data.html_url} target="_blank">
                           <h1 className="title-font text-lg font-medium text-gray-900 mb-3 dark:text-white">
                             {data.full_name}
                           </h1>
-                        </a>
                       </Link>
                       <p className="leading-relaxed mb-3 dark:text-gray-300">
                         {data.description}
                       </p>
                       <div className="flex items-center flex-wrap">
-                        <a className="text-indigo-500 dark:text-indigo-200 border-solid	border-2 border-sky-500 dark:border-gray-300 p-2 rounded inline-flex items-center md:mb-2 lg:mb-0">
+                      <Link href={data.html_url} target="_blank" className="text-indigo-500 dark:text-indigo-200 border-solid	border-2 border-sky-500 dark:border-gray-300 p-2 rounded inline-flex items-center md:mb-2 lg:mb-0">
                           Check it out
                           <svg
                             className="w-4 h-4 ml-2"
@@ -87,7 +93,7 @@ export default function Projects({ data }) {
                             <path d="M5 12h14"></path>
                             <path d="M12 5l7 7-7 7"></path>
                           </svg>
-                        </a>
+                        </Link>
                         <span className="text-black dark:text-gray-300 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                           <svg
                             className="w-4 h-4 mr-1"
@@ -101,16 +107,14 @@ export default function Projects({ data }) {
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                             <circle cx="12" cy="12" r="3"></circle>
                           </svg>
-                          <Link href={data.html_url + "/watchers"}>
-                            <a target="_blank">{data.watchers_count}</a>
+                          <Link href={data.html_url + "/watchers"} target="_blank">
+                            {data.watchers_count}
                           </Link>
                         </span>
                         <span className="text-black dark:text-gray-300 inline-flex items-center leading-none text-sm">
-                          <Link href={data.html_url + "/stargazers"}>
-                            <a target="_blank">
+                          <Link href={data.html_url + "/stargazers"} target="_blank">
                               <i className="bx bx-star w-4 h-4"></i>
                               {data.stargazers_count}
-                            </a>
                           </Link>
                         </span>
                       </div>
@@ -134,11 +138,14 @@ export const getStaticProps = async () => {
     "student-finance",
   ];
   var data = [];
+  const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN
+  })
   for (var i = 0; i < repo_username.length; i++) {
     data = data.concat(
-      await fetch(
-        "https://api.github.com/users/" + repo_username[i] + "/repos"
-      ).then((response) => response.json())
+      (await octokit.request(
+        "GET /users/{user}/repos", {'user': repo_username[i]}
+      )).data
     );
   }
   return {

@@ -17,7 +17,7 @@ function TechStacks() {
             </span>
             <hr />
             <br />
-            <p>
+            <div className="grid gap-4 grid-cols-10">
                 {data.map((item: Item) => {
                     return (
                         <Image
@@ -34,7 +34,7 @@ function TechStacks() {
                         />
                     );
                 })}
-            </p>
+            </div>
         </section>
     )
 }

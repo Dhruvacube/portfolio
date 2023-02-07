@@ -46,23 +46,15 @@ const Footer = () => {
         </a>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 dark:text-white">
           © <span id="yearid"><Script strategy="worker" id="putyearid">{`span = document.getElementById("yearid");txt = document.createTextNode(new Date().getFullYear());span.appendChild(txt);`}</Script></span> —
-          <Link href={get_item("twitter").url}>
-            <a
-              className="text-gray-600 ml-1 dark:text-white"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+          <Link href={get_item("twitter").url} className="text-gray-600 ml-1 dark:text-white" rel="noopener noreferrer" target="_blank">
               @DhruvaShaw
-            </a>
           </Link>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {data.map((item) => {
             return (
-              <Link href={item.url} key={item.name}>
-                <a className="text-gray-500 dark:text-gray-400" target="_blank" title={item.name} key={item.name}>
+              <Link href={item.url} key={item.name} className="text-gray-500 dark:text-gray-400" target="_blank" title={item.name}>
                   {get_element(item)}
-                </a>
               </Link>
             )
           })}
@@ -70,10 +62,8 @@ const Footer = () => {
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {data.map((item) => {
             return (
-              <Link href={item.url} key={item.name}>
-                <a className="text-gray-500 dark:text-gray-400 pr-1.5" target="_blank" title={item.name} key={item.name}>
+              <Link href={item.url} key={item.name} className="text-gray-500 dark:text-gray-400 pr-1.5" target="_blank" title={item.name}>
                   {get_image_element(item)}
-                </a>
               </Link>
             )
           })}

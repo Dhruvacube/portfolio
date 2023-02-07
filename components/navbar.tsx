@@ -4,7 +4,6 @@ import Link from "next/link";
 import { NextComponentType } from "next";
 
 const Navbar: NextComponentType = () => {
-  const support_url = "https://ko-fi.com/mikuchan";
   const blog_url = "https://dhruvashaw.hashnode.dev/"
   return (
     <nav>
@@ -14,42 +13,29 @@ const Navbar: NextComponentType = () => {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <Link href="/">
-                  <a
-                    className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page"
-                  >
+                <Link href="/"
+                className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                aria-current="page"
+                >
                     Home
-                  </a>
                 </Link>
 
-                <Link href="#">
-                  <a className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="#" className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Resume
-                  </a>
                 </Link>
 
-                <Link href="/projects">
-                  <a className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/projects" className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Projects
-                  </a>
                 </Link>
 
-                <Link href={blog_url}>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
+                <Link href={blog_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
                     Blogs
-                  </a>
                 </Link>
 
-                <Link href={support_url}>
-                  <a target="_blank" className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    Support Us
-                  </a>
-                </Link>
               </div>
             </div>
           </div>
@@ -107,42 +93,22 @@ const Navbar: NextComponentType = () => {
       </div>
       <div className="sm:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 dark:text-white text-black">
-          <Link href="/">
-            <a
-              className="block px-3 py-2 rounded-md text-base font-medium"
-              aria-current="page"
-            >
+          <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
               Home
-            </a>
           </Link>
             <hr/>
-          <Link href="#">
-            <a className="block px-3 py-2 rounded-md text-base font-medium">
+          <Link href="#" className="block px-3 py-2 rounded-md text-base font-medium">
               Resume
-            </a>
           </Link>
             <hr/>
-          <Link href="/projects">
-            <a className="block px-3 py-2 rounded-md text-base font-medium">
+          <Link href="/projects" className="block px-3 py-2 rounded-md text-base font-medium">
               Projects
-            </a>
           </Link>
             <hr/>
-          <Link href={blog_url}>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-3 py-2 rounded-md text-base font-medium"
-            >
+          <Link href={blog_url} target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-md text-base font-medium">
               Blogs
-            </a>
           </Link>
             <hr/>
-          <Link href={support_url}>
-            <a target="_blank" className="block px-3 py-2 rounded-md text-base font-medium">
-              Support Us
-            </a>
-          </Link>
         </div>
       </div>
     </nav>

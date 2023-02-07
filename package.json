@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/codemod": "^13.1.6",
+    "@octokit/core": "^4.2.0",
     "@types/gtag.js": "^0.0.12",
     "create-next-app": "^13.0.6",
     "next": "^13.0.7",
