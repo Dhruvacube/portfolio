@@ -11,7 +11,7 @@ export const config = { amp: 'hybrid' }
 const Home = () => {
   const isAmp = useAmp()
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font shadow-lg dark:shadow-none rounded-b-lg dark:rounded-none">
       <Head>
         <title>Dhruva Shaw</title>
       </Head>
@@ -27,8 +27,8 @@ const Home = () => {
             />
           </div>
           <div className="flex flex-col sm:flex-row mt-10">
-            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-              <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8  ">
+              <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 ">
                 <Image
                   alt="profile image"
                   className="h-full w-full"
@@ -60,7 +60,7 @@ const Home = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left  ">
               <p className="leading-relaxed text-lg mb-4 dark:text-gray-300">
                 Warm greetings from Dhruva Shaw
                 <br />

@@ -6,7 +6,7 @@ import { NextComponentType } from "next";
 const Navbar: NextComponentType = () => {
   const blog_url = "https://dhruvashaw.hashnode.dev/"
   return (
-    <nav>
+    <nav className="shadow-lg dark:shadow-none rounded-lg dark:rounded-none">
       <Script src="/js/toggler.js" />
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
