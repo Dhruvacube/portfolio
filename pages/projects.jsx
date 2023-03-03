@@ -10,6 +10,13 @@ import { useAmp } from "next/amp";
 const { Octokit } = require("@octokit/core");
 export const config = { amp: false };
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+};
+
 export default function Projects({ data }) {
   const isAmp = useAmp();
   const [count, setCount] = useState(6);
@@ -33,7 +40,7 @@ export default function Projects({ data }) {
         var aax_pubname = 'dhruvashaw-21';
         var aax_src='302';`}
       </Script>
-      <Script src="http://c.amazon-adsystem.com/aax2/assoc.js" />
+      <Script src="https://c.amazon-adsystem.com/aax2/assoc.js" />
       <InfiniteScroll
         dataLength={projects.length}
         next={getMorePost}
@@ -159,7 +166,8 @@ export const getStaticProps = async () => {
         })
       ).data
     );
-  }
+  };
+  shuffle(data);
   return {
     props: { data },
   };
