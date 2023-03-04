@@ -15,7 +15,7 @@ function shuffle(array) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-};
+}
 
 export default function Projects({ data }) {
   const isAmp = useAmp();
@@ -166,7 +166,7 @@ export const getStaticProps = async () => {
         })
       ).data
     );
-  };
+  }
   shuffle(data);
   return {
     props: { data },
