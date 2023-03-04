@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 import * as gtag from '../lib/gtag';
-
+import { Partytown } from '@builder.io/partytown/react';
 
 export default function Document() {
   return (
@@ -21,14 +21,16 @@ export default function Document() {
               document.documentElement.classList.remove('dark')
           }`}
         </Script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2736810871076484" crossOrigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2736810871076484" crossOrigin="anonymous" type="text/partytown"></script>
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+          type="text/partytown"
         />
         <Script
           id="gtag-init"
           strategy="afterInteractive"
+          type="text/partytown"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
