@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
-import * as gtag from '../lib/gtag';
-import { Partytown } from '@builder.io/partytown/react';
+import * as gtag from "../lib/gtag";
+import { Partytown } from "@builder.io/partytown/react";
 
 export default function Document() {
   return (
@@ -13,7 +13,10 @@ export default function Document() {
           href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
         <Script strategy="beforeInteractive" id="theme-toggler">
           {`if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
               document.documentElement.classList.add('dark');
@@ -21,7 +24,12 @@ export default function Document() {
               document.documentElement.classList.remove('dark')
           }`}
         </Script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2736810871076484" crossOrigin="anonymous" type="text/partytown"></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2736810871076484"
+          crossOrigin="anonymous"
+          type="text/partytown"
+        ></script>
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
