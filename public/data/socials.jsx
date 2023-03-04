@@ -48,13 +48,13 @@ var Socials = [
     devicons: false,
     url: "https://www.instagram.com/dhruva_shaw_/",
   },
-  {
-    name: "Twitter",
-    file_icon_name: "twitter",
-    boxicons: true,
-    devicons: false,
-    url: "https://twitter.com/DhruvaShaw",
-  },
+  // {
+  //   name: "Twitter",
+  //   file_icon_name: "twitter",
+  //   boxicons: true,
+  //   devicons: false,
+  //   url: "https://twitter.com/DhruvaShaw",
+  // },
   {
     name: "LinkedIn",
     file_icon_name: "linkedin",

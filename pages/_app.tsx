@@ -39,14 +39,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://dhruvashaw.pages.dev/profile.png"
+          content="https://dhruvashaw.me/profile.png"
         />
         <meta
           property="og:image"
-          content="https://dhruvashaw.pages.dev/profile.png"
+          content="https://dhruvashaw.me/profile.png"
         />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:url" content="https://dhruvashaw.pages.dev" />
+        <meta property="og:url" content="https://dhruvashaw.me" />
         <meta property="og:locale" content="en_us" />
         <meta property="og:locale" content="en" />
 
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://dhruvashaw.pages.dev/profile.png"
+          content="https://dhruvashaw.me/profile.png"
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@DhruvaShaw" />
@@ -71,7 +71,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta itemProp="description" content={description} />
         <meta
           itemProp="image"
-          content="https://dhruvashaw.pages.dev/profile.png"
+          content="https://dhruvashaw.me/profile.png"
         />
         <meta name="author" content="Dhruva Shaw" />
         <meta name="copyright" content="Dhruva Shaw" />

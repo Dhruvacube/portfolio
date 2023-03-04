@@ -21,6 +21,6 @@
     "**/*.tsx",
     "pages/index.tsx",
     "components/tech_stacks.tsx"
-  ],
+, "components/navbar.jsx", "components/navbar.jsx"  ],
   "exclude": ["node_modules"]
 }

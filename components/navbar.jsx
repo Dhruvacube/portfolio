@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import { NextComponentType } from "next";
+import { useRouter } from 'next/router';
 
-const Navbar: NextComponentType = () => {
-  const blog_url = "https://dhruvashaw.hashnode.dev/"
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+};
+
+const Navbar = () => {
+  const { pathname } = useRouter();
+  const blog_url = "https://blogs.dhruvashaw.me/";
   return (
     <nav className="shadow-lg dark:shadow-none rounded-lg dark:rounded-none">
       <Script src="/js/toggler.js" />
@@ -14,7 +19,7 @@ const Navbar: NextComponentType = () => {
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 <Link href="/"
-                className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                className={classNames(pathname=='/' ? "bg-gray-900 text-white" : "text-gray-800 hover:bg-gray-700 hover:text-white", "px-3 py-2 rounded-md text-sm font-medium dark:text-white")}
                 aria-current="page"
                 >
                     Home
@@ -24,7 +29,7 @@ const Navbar: NextComponentType = () => {
                     Resume
                 </Link>
 
-                <Link href="/projects" className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/projects" className={classNames(pathname=='/projects' ? "bg-gray-900 text-white" : "text-gray-800 hover:bg-gray-700 hover:text-white", "px-3 py-2 rounded-md text-sm font-medium dark:text-white")}>
                     Projects
                 </Link>
 

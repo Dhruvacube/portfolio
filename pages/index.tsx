@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
+import { Fragment } from 'react';
+import { Transition } from '@headlessui/react';
 import { get_item, get_element } from "../components/footer"
 import TechStacks from "../components/tech_stacks";
 import Link from "next/link";
@@ -15,6 +17,16 @@ const Home = () => {
       <Head>
         <title>Dhruva Shaw</title>
       </Head>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+        show={true}
+      >
       <div className="container px-5 py-24 mx-auto flex flex-col">
         <div className="lg:w-4/6 mx-auto">
           <div className="rounded-lg h-64 overflow-hidden">
@@ -77,6 +89,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      </Transition>
     </section>
   );
 };
