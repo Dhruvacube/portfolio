@@ -30,7 +30,6 @@ export default function Document() {
         <Script
           id="gtag-init"
           strategy="afterInteractive"
-          type="text/partytown"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
