@@ -1,27 +1,27 @@
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Head from "next/head";
-import type { AppProps } from 'next/app';
-import * as gtag from '../lib/gtag';
+import type { AppProps } from "next/app";
+import * as gtag from "../lib/gtag";
 import Footer from "../components/footer";
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const description = "A discord.py bot developer and a full stack web developer using python";
-  const router = useRouter()
+  const description =
+    "A discord.py bot developer and a full stack web developer using python";
+  const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    router.events.on('hashChangeComplete', handleRouteChange)
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("hashChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-      router.events.off('hashChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
-
+      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("hashChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <section>
@@ -41,10 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           itemProp="image"
           content="https://dhruvashaw.me/profile.png"
         />
-        <meta
-          property="og:image"
-          content="https://dhruvashaw.me/profile.png"
-        />
+        <meta property="og:image" content="https://dhruvashaw.me/profile.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:url" content="https://dhruvashaw.me" />
         <meta property="og:locale" content="en_us" />
@@ -69,14 +66,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#0989d9" />
         <meta itemProp="name" content="Dhruva Shaw" />
         <meta itemProp="description" content={description} />
-        <meta
-          itemProp="image"
-          content="https://dhruvashaw.me/profile.png"
-        />
+        <meta itemProp="image" content="https://dhruvashaw.me/profile.png" />
         <meta name="author" content="Dhruva Shaw" />
         <meta name="copyright" content="Dhruva Shaw" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        
       </Head>
       <Navbar />
       <Component {...pageProps} />
