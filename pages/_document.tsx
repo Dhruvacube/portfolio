@@ -11,7 +11,7 @@ export default function Document() {
         <link href="/favicon.ico" rel="apple-touch-icon" />
         <link
           href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-          rel="stylesheet"
+          rel="preconnect"
           type="text/partytown"
         />
         <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" type="text/partytown" rel="preconnect" />
