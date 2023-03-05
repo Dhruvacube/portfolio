@@ -11,13 +11,11 @@ export default function Document() {
         <link href="/favicon.ico" rel="apple-touch-icon" />
         <link
           href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-          rel="preconnect"
-          type="text/partytown"
+          rel="stylesheet"
         />
         <link
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-          type="text/partytown"
-          rel="preconnect"
+          rel="stylesheet"
         />
         <Script strategy="beforeInteractive" id="theme-toggler">
           {`if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
