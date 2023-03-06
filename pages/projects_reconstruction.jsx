@@ -33,17 +33,17 @@ const repo_username = [
 ];
 
 function new_Repo_name() {
-  var data = [{ name: "Robotics", href: "#" }];
+  var data = [{ name: "Robotics", href: "?robotics" }];
   for (var i = 0; i < repo_username.length; i++) {
-    data.push({ name: repo_username[i], href: "#" });
+    data.push({ name: repo_username[i], href: "?"+repo_username[i] });
   }
   return data;
 }
 
 const sortOptions = [
-  { name: "All", href: "#", current: true },
-  { name: "Archived", href: "#", current: false },
-  { name: "Non - Archived", href: "#", current: false },
+  { name: "All", href: "#all", current: true },
+  { name: "Archived", href: "#archived", current: false },
+  { name: "Non - Archived", href: "#non-archived", current: false },
 ];
 const subCategories = new_Repo_name();
 const filters = [
@@ -63,7 +63,6 @@ function classNames(...classes) {
 
 export default function Projects({ data }) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const isAmp = useAmp();
   const [count, setCount] = useState(6);
   const [projects, setProjects] = useState(data.slice(0, count));
   const [hasMore, setHasMore] = useState(true);
@@ -134,9 +133,9 @@ export default function Projects({ data }) {
                     >
                       {subCategories.map((category) => (
                         <li key={category.name}>
-                          <a href={category.href} className="block px-2 py-3">
+                          <Link href={category.href} className="block px-2 py-3">
                             {category.name}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -237,7 +236,7 @@ export default function Projects({ data }) {
                       {sortOptions.map((option) => (
                         <Menu.Item key={option.name}>
                           {({ active }) => (
-                            <a
+                            <Link
                               href={option.href}
                               className={classNames(
                                 option.current
@@ -248,7 +247,7 @@ export default function Projects({ data }) {
                               )}
                             >
                               {option.name}
-                            </a>
+                            </Link>
                           )}
                         </Menu.Item>
                       ))}
@@ -290,7 +289,7 @@ export default function Projects({ data }) {
                 >
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href}>{category.name}</a>
+                      <Link href={category.href}>{category.name}</Link>
                     </li>
                   ))}
                 </ul>
