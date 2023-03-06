@@ -15,7 +15,7 @@
     "@octokit/core": "^4.2.0",
     "@tailwindcss/forms": "^0.5.3",
     "@types/gtag.js": "^0.0.12",
-    "create-next-app": "^13.1.6",
+    "create-next-app": "^13.2.3",
     "next": "^13.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
