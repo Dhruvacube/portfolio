@@ -416,8 +416,8 @@ export default function Projects({ data }) {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           >
-                            <path d="M5 12h14"></path>
-                            <path d="M12 5l7 7-7 7"></path>
+                            <path d="M5 12h14" />
+                            <path d="M12 5l7 7-7 7" />
                           </svg>
                         </Link>
                         <span className="text-black dark:text-gray-300 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
@@ -430,8 +430,8 @@ export default function Projects({ data }) {
                             strokeLinejoin="round"
                             viewBox="0 0 24 24"
                           >
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
                           </svg>
                           <Link
                             href={data.html_url + "/watchers"}
@@ -445,7 +445,7 @@ export default function Projects({ data }) {
                             href={data.html_url + "/stargazers"}
                             target="_blank"
                           >
-                            <i className="bx bx-star w-4 h-4"></i>
+                            <i className="bx bx-star w-4 h-4" />
                             {data.stargazers_count}
                           </Link>
                         </span>
