@@ -29,7 +29,7 @@ export default function Document() {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2736810871076484"
           crossOrigin="anonymous"
           type="text/partytown"
-         />
+        />
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
