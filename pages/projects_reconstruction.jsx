@@ -35,7 +35,7 @@ const repo_username = [
 function new_Repo_name() {
   var data = [{ name: "Robotics", href: "?robotics" }];
   for (var i = 0; i < repo_username.length; i++) {
-    data.push({ name: repo_username[i], href: "?"+repo_username[i] });
+    data.push({ name: repo_username[i], href: "?" + repo_username[i] });
   }
   return data;
 }
@@ -133,7 +133,10 @@ export default function Projects({ data }) {
                     >
                       {subCategories.map((category) => (
                         <li key={category.name}>
-                          <Link href={category.href} className="block px-2 py-3">
+                          <Link
+                            href={category.href}
+                            className="block px-2 py-3"
+                          >
                             {category.name}
                           </Link>
                         </li>
