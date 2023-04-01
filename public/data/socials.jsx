@@ -1,4 +1,4 @@
-var Socials = [
+const Socials = [
   {
     name: "Dev.to",
     file_icon_name: "dev-to",
@@ -113,4 +113,7 @@ var Socials = [
   },
 ];
 
+const resume = "/pdf/resume.pdf"
+
 export default Socials;
+export {resume};

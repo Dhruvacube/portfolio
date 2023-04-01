@@ -2,6 +2,7 @@ import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import {resume} from "../public/data/socials";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -25,7 +26,7 @@ const Navbar = () => {
                     Home
                 </Link>
 
-                <Link href="#" className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link href={resume} className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Resume
                 </Link>
 
