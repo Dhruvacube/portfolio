@@ -6,7 +6,7 @@ import { get_item, get_element } from "../components/footer";
 import TechStacks from "../components/tech_stacks";
 import Link from "next/link";
 import { useAmp } from "next/amp";
-import {resume} from "../public/data/socials";
+import { resume } from "../public/data/socials";
 
 export const config = { amp: "hybrid" };
 

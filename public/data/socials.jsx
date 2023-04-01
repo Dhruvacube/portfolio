@@ -113,7 +113,7 @@ const Socials = [
   },
 ];
 
-const resume = "/pdf/resume.pdf"
+const resume = "/pdf/resume.pdf";
 
 export default Socials;
-export {resume};
+export { resume };

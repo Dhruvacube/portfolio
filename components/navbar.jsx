@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import { useRouter } from 'next/router';
-import {resume} from "../public/data/socials";
+import { useRouter } from "next/router";
+import { resume } from "../public/data/socials";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-};
+  return classes.filter(Boolean).join(" ");
+}
 
 const Navbar = () => {
   const { pathname } = useRouter();
@@ -19,29 +19,46 @@ const Navbar = () => {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <Link href="/"
-                className={classNames(pathname=='/' ? "bg-gray-900 text-white" : "text-gray-800 hover:bg-gray-700 hover:text-white", "px-3 py-2 rounded-md text-sm font-medium dark:text-white")}
-                aria-current="page"
+                <Link
+                  href="/"
+                  className={classNames(
+                    pathname == "/"
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-800 hover:bg-gray-700 hover:text-white",
+                    "px-3 py-2 rounded-md text-sm font-medium dark:text-white"
+                  )}
+                  aria-current="page"
                 >
-                    Home
+                  Home
                 </Link>
 
-                <Link href={resume} className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    Resume
-                </Link>
-
-                <Link href="/projects" className={classNames(pathname=='/projects' ? "bg-gray-900 text-white" : "text-gray-800 hover:bg-gray-700 hover:text-white", "px-3 py-2 rounded-md text-sm font-medium dark:text-white")}>
-                    Projects
-                </Link>
-
-                <Link href={blog_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                <Link
+                  href={resume}
+                  className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                    Blogs
+                  Resume
                 </Link>
 
+                <Link
+                  href="/projects"
+                  className={classNames(
+                    pathname == "/projects"
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-800 hover:bg-gray-700 hover:text-white",
+                    "px-3 py-2 rounded-md text-sm font-medium dark:text-white"
+                  )}
+                >
+                  Projects
+                </Link>
+
+                <Link
+                  href={blog_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-800 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Blogs
+                </Link>
               </div>
             </div>
           </div>
@@ -59,7 +76,7 @@ const Navbar = () => {
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
               </svg>
               <svg
                 id="theme-toggle-light-icon"
@@ -99,22 +116,37 @@ const Navbar = () => {
       </div>
       <div className="sm:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 dark:text-white text-black">
-          <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
-              Home
+          <Link
+            href="/"
+            className="block px-3 py-2 rounded-md text-base font-medium"
+            aria-current="page"
+          >
+            Home
           </Link>
-            <hr/>
-          <Link href="#" className="block px-3 py-2 rounded-md text-base font-medium">
-              Resume
+          <hr />
+          <Link
+            href="#"
+            className="block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Resume
           </Link>
-            <hr/>
-          <Link href="/projects" className="block px-3 py-2 rounded-md text-base font-medium">
-              Projects
+          <hr />
+          <Link
+            href="/projects"
+            className="block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Projects
           </Link>
-            <hr/>
-          <Link href={blog_url} target="_blank" rel="noopener noreferrer" className="block px-3 py-2 rounded-md text-base font-medium">
-              Blogs
+          <hr />
+          <Link
+            href={blog_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Blogs
           </Link>
-            <hr/>
+          <hr />
         </div>
       </div>
     </nav>
