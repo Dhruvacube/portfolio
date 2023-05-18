@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [ '16.5']
+        node-version: [ '16.8']
         language: [ 'en']
 
     name: build next
