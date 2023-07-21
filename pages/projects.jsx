@@ -6,6 +6,7 @@ import { ThreeDots } from "react-loader-spinner";
 import Link from "next/link";
 import Script from "next/script";
 import { useAmp } from "next/amp";
+import { log } from "console";
 
 const { Octokit } = require("@octokit/core");
 export const config = { amp: false };
@@ -150,9 +151,7 @@ export default function Projects({ data }) {
 export const getStaticProps = async () => {
   const repo_username = [
     "Dhruvacube",
-    "The-4th-Hokage",
-    "Hatsune-Miku-Bot",
-    "student-finance",
+    "The-4th-Hokage"
   ];
   var data = [];
   const octokit = new Octokit({
@@ -160,12 +159,14 @@ export const getStaticProps = async () => {
   });
   for (var i = 0; i < repo_username.length; i++) {
     data = data.concat(
-      (
         await octokit.request("GET /users/{user}/repos", {
-          user: repo_username[i],
+          username: repo_username[i],
+          headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+          }
         })
-      ).data
     );
+    log(data)
   }
   shuffle(data);
   return {
