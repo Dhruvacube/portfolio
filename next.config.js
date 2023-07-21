@@ -15,10 +15,10 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
-      require('./lib/generate-sitemap')
+      require("./lib/generate-sitemap");
     }
 
-    return config
+    return config;
   },
   // webpack: (config) => {
   //   config.resolve.fallback = { fs: false, path: false, stream: false, constants: false };
