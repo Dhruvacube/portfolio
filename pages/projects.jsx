@@ -149,24 +149,21 @@ export default function Projects({ data }) {
 }
 
 export const getStaticProps = async () => {
-  const repo_username = [
-    "Dhruvacube",
-    "The-4th-Hokage"
-  ];
+  const repo_username = ["Dhruvacube", "The-4th-Hokage"];
   var data = [];
   const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
   });
   for (var i = 0; i < repo_username.length; i++) {
     data = data.concat(
-        await octokit.request("GET /users/{user}/repos", {
-          username: repo_username[i],
-          headers: {
-            'X-GitHub-Api-Version': '2022-11-28'
-          }
-        })
+      await octokit.request("GET /users/{user}/repos", {
+        username: repo_username[i],
+        headers: {
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      }),
     );
-    log(data)
+    log(data);
   }
   shuffle(data);
   return {
