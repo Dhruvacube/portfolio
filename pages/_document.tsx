@@ -2,6 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
 import { Partytown } from "@builder.io/partytown/react";
+const siteKey = process.env.SITE_KEY;
 
 export default function Document() {
   return (
@@ -50,7 +51,9 @@ export default function Document() {
           }}
         />
       </Head>
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer />
       <body className="bg-white dark:text-white body-font dark:from-cyan-500 dark:to-slate-900	dark:via-slate-700 dark:bg-gradient-to-r">
+      <div className="cf-turnstile" data-sitekey={siteKey} data-callback="javascriptCallback" />
         <Main />
         <NextScript />
       </body>
