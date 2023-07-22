@@ -151,15 +151,21 @@ export const getStaticProps = async () => {
   var data = [];
   for (var i = 0; i < repo_username.length; i++) {
     data = data.concat(
-      await (await fetch("https://api.github.com/users/" + repo_username[i] +"/repos",{
-        method: 'GET',
-        headers: {
-          "X-GitHub-Api-Version" : "2022-11-28",
-          "Accept": "application/vnd.github+json",
-          "Authorization": process.env.GITHUB_TOKEN
-      }})).json()
+      await (
+        await fetch(
+          "https://api.github.com/users/" + repo_username[i] + "/repos",
+          {
+            method: "GET",
+            headers: {
+              "X-GitHub-Api-Version": "2022-11-28",
+              Accept: "application/vnd.github+json",
+              Authorization: process.env.GITHUB_TOKEN,
+            },
+          },
+        )
+      ).json(),
     );
-  };
+  }
   shuffle(data);
   return {
     props: { data },
