@@ -51,9 +51,16 @@ export default function Document() {
           }}
         />
       </Head>
-      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer />
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+        defer
+      />
       <body className="bg-white dark:text-white body-font dark:from-cyan-500 dark:to-slate-900	dark:via-slate-700 dark:bg-gradient-to-r">
-      <div className="cf-turnstile" data-sitekey={siteKey} data-callback="javascriptCallback" />
+        <div
+          className="cf-turnstile"
+          data-sitekey={siteKey}
+          data-callback="javascriptCallback"
+        />
         <Main />
         <NextScript />
       </body>
