@@ -10,7 +10,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const { pathname } = useRouter();
-  const blog_url = "https://blogs.dhruvashaw.me/";
+  const blog_url = "https://blogs.dhruvashaw.in/";
   return (
     <nav className="shadow-lg dark:shadow-none rounded-lg dark:rounded-none">
       <Script src="/js/toggler.js" />
