@@ -33,7 +33,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Dhruva Shaw" />
         <meta property="og:type" content="Website" />
         <meta property="og:description" content={description} />
-        <meta property="keywords" content="Dhruva Shaw, Dhruva, Shaw, developer, engineer, robotics, robotics engineer, discord, discord.py, cuber, lpu, cubing, electronics, ieee, arduino, esp32" />
+        <meta
+          property="keywords"
+          content="Dhruva Shaw, Dhruva, Shaw, developer, engineer, robotics, robotics engineer, discord, discord.py, cuber, lpu, cubing, electronics, ieee, arduino, esp32"
+        />
         <meta
           property="og:image"
           itemProp="image"
