@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.12",
+    "@headlessui/react": "^1.7.16",
     "@heroicons/react": "^2.0.16",
     "@next/codemod": "^13.4.11",
     "@octokit/core": "^5.0.0",
