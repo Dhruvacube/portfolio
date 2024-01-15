@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-loader-spinner": "^5.3.4",
-    "sharp": "^0.32.1"
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@builder.io/partytown": "^0.7.5",
